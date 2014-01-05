@@ -2,8 +2,9 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     var socket = io.connect('/consumer');
-    socket.on('beat', function(){
-      console.log('beat');
+    socket.on('beat', function(data){
+      console.log('beat', (new Date - data.time));
+      socket.emit('time', {time: data.time});
     });
   </script>
 </html>
