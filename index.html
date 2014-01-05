@@ -1,0 +1,9 @@
+<html>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('/consumer');
+    socket.on('beat', function(){
+      console.log('beat');
+    });
+  </script>
+</html>

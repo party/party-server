@@ -1,0 +1,9 @@
+<html>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('/provider');
+    setInterval(function(){
+      socket.emit('beat');
+    }, 500);
+  </script>
+</html>
