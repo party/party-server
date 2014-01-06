@@ -46,7 +46,7 @@ to start again</td>
 				console.log("setting bpm", chosen);
 				//socket.emit("bpm", chosen);
 			} , 5000);
-			$("button").click(function() {
+			$("button").mousedown(function() {
 				socket.emit("bump");
 			});
 		</script>
@@ -94,7 +94,7 @@ function TapForBPM(e)
   msecsPrevious = msecs;
   return true;
   }
-document.onkeypress = TapForBPM;
+document.onkeydown = TapForBPM;
 		</script>
 
    </body>
