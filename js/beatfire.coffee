@@ -20,10 +20,14 @@ changeInterval = (newBpm) ->
 	60000 / newBpm)
 
 socket.on('bpm', changeInterval)
+unpause = undefined
 socket.on("bump", ->
+	console.log "bump"
 	$("body").trigger("beatFireBump")
+	if paused and unpause
+		clearTimeout(unpause)
 	paused = true
-	setTimeout( ->
+	unpause = setTimeout( ->
 		paused = false
 	, 20000)
 )
