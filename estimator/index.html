@@ -8,8 +8,8 @@
 			var socket = io.connect('http://party.naked.sh:80/provider');
 			setInterval(function() {
 				var chosen = (Math.random() * 50) + 80;
-				//console.log("setting bpm", chosen);
-				//socket.emit("bpm", chosen);
+				console.log("setting bpm", chosen);
+				socket.emit("bpm", chosen);
 			} , 5000);
 			$("button").click(function() {
 				socket.emit("bump");
