@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h1>Estimator</h1>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://party.naked.sh/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io.connect('http://party.naked.sh:80/provider');
+			setInterval(function() {
+				var chosen = (Math.random() * 50) + 80;
+				console.log("setting bpm", chosen);
+				socket.emit("bpm", chosen);
+			} , 5000);
+		</script>
+
+   </body>
+</html>
