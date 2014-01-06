@@ -3,7 +3,7 @@
   <script>
     var socket = io.connect('/provider');
     setInterval(function(){
-      socket.emit('beat');
+      socket.emit('beat', {time: +new Date});
     }, 500);
   </script>
 </html>
