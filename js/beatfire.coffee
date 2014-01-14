@@ -29,5 +29,5 @@ socket.on("bump", ->
 	paused = true
 	unpause = setTimeout( ->
 		paused = false
-	, 20000)
+	, 4 * 1000)
 )
