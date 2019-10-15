@@ -9,7 +9,7 @@
   "author": "Zack Bloom <zbloom@hubspot.com>",
   "license": "BSD",
   "dependencies": {
-    "express": "~3.4.7",
+    "express": "~4.17.1",
     "socket.io": "~0.9.16"
   }
 }
